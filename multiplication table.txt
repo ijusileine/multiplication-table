@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><style>
+.table{
+position:fixed;
+top: 250px;
+left:600px;
+}
+</style>
+    <script type="text/javascript">
+        function display() {
+            var entry = document.getElementById("userInput").value;
+            var text = "";
+	    var j = 1;
+	    var temp = entry;
+	while (j < 11)
+	 { entry=temp*j;
+   	   text += "<br>"+temp+"x" + j +"="+ entry;
+    	   
+    	   ++j;
+          }
+
+           document.getElementById("result").innerHTML = text;
+        }
+    </script>
+
+</head>
+<body>
+<div class="table">
+    <h1 id="result">JavaScript Example</h1>
+    <input type="text" id="userInput" placeholder="Enter Number" />
+    <input type="submit" value="Submit" onclick="display()" />
+</div>
+</body>
+</html>
